@@ -1,5 +1,7 @@
 ---
 import MenuItemContainerView from '../components/MenuItemContainerView.astro';
+import MenuItemView from '../components/MenuItemView.astro';
+import menuItems from '../data/menuItemsData';
 
 interface Props {
 	title: string;
@@ -20,7 +22,9 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<MenuItemContainerView>
-		
+			{menuItems.map((item) => (
+				<MenuItemView {...item} />
+			))}
 		</MenuItemContainerView>
 		<slot />
 	</body>
