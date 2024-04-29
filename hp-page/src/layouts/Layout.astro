@@ -1,4 +1,6 @@
 ---
+import MenuItemContainerView from '../components/MenuItemContainerView.astro';
+
 interface Props {
 	title: string;
 }
@@ -7,7 +9,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -17,6 +19,9 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<MenuItemContainerView>
+		
+		</MenuItemContainerView>
 		<slot />
 	</body>
 </html>
@@ -31,10 +36,11 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		color-scheme: light;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		
 		background-size: 224px;
 	}
 	code {
