@@ -1,22 +1,14 @@
-import { useState } from "react";
 import type { CardItem } from "../types/types";
 import "./cardsView.css";
-import { Picture } from "astro:assets";
 
 interface CardsViewProps {
   cards: CardItem[];
 }
 
 export default function CardsView({ cards }: CardsViewProps) {
-    const [counter, setCounter] = useState(0);
-
-    const handleClick = () => {
-        setCounter(counter + 1);
-        console.log(counter);
-    }
+    
   return (
     <div>
-        <button onClick={handleClick}>Click</button>
       <div className="cardsView">
         {cards.map((card, index) => {
           return index < 3 ? <CardView key={index} {...card} /> : null;
