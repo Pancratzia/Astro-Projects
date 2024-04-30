@@ -1,7 +1,11 @@
+---
+ import { Image } from "astro:assets";
+---
+
 <ul>
     <slot />
 </ul>
-<img class="nav-bar" src="/assets/bar-left.png" alt="Left nav bar">
+<Image src="/assets/bar-left.png" width={633} height={14.65} alt="bg" class="nav-bar" format="webp" loading="eager" />
 
 <style>
     ul{

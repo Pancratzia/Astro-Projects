@@ -1,7 +1,11 @@
+---
+import { Image } from "astro:assets";
+---
+
 <section>
-  <video src="/assets/hero.mp4" autoplay loop></video>
+  <video muted src="/assets/hero.mp4" autoplay loop></video>
   <div class="logo">
-    <img src="/assets/hero-logo.webp" alt="Harry Potter logo" />
+    <Image src="/assets/hero-logo.webp" width={600} height={190.5} alt="logo" format="webp" loading="eager" />
   </div>
 </section>
 
