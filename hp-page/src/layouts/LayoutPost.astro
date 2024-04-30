@@ -8,9 +8,12 @@ import HeroLogo from "../../public/assets/hero-logo.webp";
 
 interface Props {
   title: string;
+  frontmatter?: {
+    title: string;  
+  }
 }
 
-const { title } = Astro.props;
+const { title, frontmatter } = Astro.props;
 ---
 
 <!doctype html>
@@ -21,7 +24,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{frontmatter?.title ?? title}</title>
   </head>
   <body>
     <MenuItemContainerView>
@@ -57,12 +60,17 @@ const { title } = Astro.props;
   }
   html {
     font-family: system-ui, sans-serif;
-    background-color: black;
+    background-color: #181e1e;
   }
 
   body {
     margin: 0;
     padding: 0;
+    background-image: url(/assets/bg.webp);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    font-size: 18px;
   }
   code {
     font-family:
@@ -94,5 +102,9 @@ const { title } = Astro.props;
 
   p img {
     width: 100%;
+  }
+
+  .container a{
+    color: rgb(255, 179, 0);
   }
 </style>

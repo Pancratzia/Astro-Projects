@@ -1,0 +1,33 @@
+---
+export interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+import { Picture } from "astro:assets";
+import TitleDecoration from "../../public/assets/title-decoration.webp";
+import TitleDecorationBottom from "../../public/assets/title-decoration-bottom.webp";
+
+---
+
+<div class="titleContainer">
+  <div>
+    <Picture src={TitleDecoration} alt="title-decoration" format="webp" />
+  </div>
+  <h2>{title}</h2>
+  <div>
+    <Picture src={TitleDecorationBottom} alt="title-decoration-bottom" format="webp" />
+  </div>
+</div>
+
+<style>
+  img {
+    width: 300px;
+    height: auto;
+  }
+  .titleContainer {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>

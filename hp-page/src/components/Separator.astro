@@ -1,0 +1,22 @@
+---
+import { Picture } from "astro:assets";
+import Rule from "../../public/assets/rule.png";
+---
+
+<div class="rule">
+    <Picture src={Rule} alt="rule" format="webp" loading="eager" />
+</div>
+
+<style>
+    .rule{
+        padding: 40px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .rule img{
+        width: 200px;
+        text-align: center;
+        height: auto;
+    }
+</style>

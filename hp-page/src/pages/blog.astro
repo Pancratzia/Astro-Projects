@@ -1,6 +1,14 @@
 ---
-import LayoutPost from '../layouts/LayoutPost.astro';
+import PostPreview from "../components/PostPreview.astro";
+import Title from "../components/Title.astro";
+import LayoutPost from "../layouts/LayoutPost.astro";
+
+const posts = await Astro.glob("./posts/*.md");
 ---
+
 <LayoutPost title="Harry Potter - Blog">
-    <h1>Blog</h1>
+  <section>
+    <Title title="Últimas Noticias" />
+    {posts.map((post) => <PostPreview post={post} />)}
+  </section>
 </LayoutPost>
