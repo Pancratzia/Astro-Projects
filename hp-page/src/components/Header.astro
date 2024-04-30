@@ -1,11 +1,12 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
+import HeroLogo from "../../public/assets/hero-logo.webp";
 ---
 
 <section>
   <video muted src="/assets/hero.mp4" autoplay loop></video>
   <div class="logo">
-    <Image src="/assets/hero-logo.webp" width={600} height={190.5} alt="logo" format="webp" loading="eager" />
+    <Picture src={HeroLogo} alt="logo" format="webp" loading="eager"  />
   </div>
 </section>
 
@@ -26,13 +27,15 @@ import { Image } from "astro:assets";
     text-align: center;
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1200px) {
     .logo {
-      top: -450px;
+      top: -500px;
     }
   }
 
   .logo img {
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
   }
 </style>
