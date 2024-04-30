@@ -1,6 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import LayoutPost from "../layouts/LayoutPost.astro";
+import faqs from "../data/faqData";
+import Title from "../components/Title.astro";
+import FaqItem from "../components/FaqItem.astro";
 ---
-<Layout title="Harry Potter - FAQ">
-    <h1>FAQ</h1>
-</Layout>
+
+<LayoutPost title="FAQ">
+  <section>
+    <Title title="Preguntas Frecuentes" />
+
+    {faqs.map((f) => <FaqItem item={f} />)}
+  </section>
+</LayoutPost>
+
+<style>
+  section {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
