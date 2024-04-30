@@ -11,3 +11,35 @@ const { title, url } = Astro.props;
         {title}
     </a>
 </li>
+
+<style>
+    li{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li a{
+        
+        display: block;
+        padding: 30px;
+        color: white;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    @media (min-width: 1024px) {
+        li a{
+            padding: 30px 40px;
+            font-size: 20px;
+        }
+    }
+
+    li a:hover{
+        color: orange;
+        transform: scale(1.15);
+    }
+</style>

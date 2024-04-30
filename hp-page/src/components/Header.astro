@@ -1,0 +1,34 @@
+<section>
+  <video src="/assets/hero.mp4" autoplay loop></video>
+  <div class="logo">
+    <img src="/assets/hero-logo.webp" alt="Harry Potter logo" />
+  </div>
+</section>
+
+<style>
+  section {
+    height: 100vh;
+    background-color: black;
+  }
+
+  video {
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    position: relative;
+    top: -350px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1024px) {
+    .logo {
+      top: -450px;
+    }
+  }
+
+  .logo img {
+    width: 600px;
+  }
+</style>
