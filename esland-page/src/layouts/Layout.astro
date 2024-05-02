@@ -5,6 +5,8 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+
+import Header from '../components/Header.astro';
 ---
 
 <!doctype html>
@@ -16,7 +18,8 @@ const { title, description } = Astro.props;
 		<meta name="description" content={description} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="bg-slate-900">
+		<Header />
 		<slot />
 	</body>
 </html>
